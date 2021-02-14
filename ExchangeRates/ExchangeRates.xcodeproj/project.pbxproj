@@ -3,27 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715C25D92D95002DE2DC /* BanksViewController.swift */; };
+		8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715F25D92DC7002DE2DC /* BanksView.swift */; };
+		8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */; };
+		8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716525D92FF3002DE2DC /* ConvertationView.swift */; };
+		8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB12B25D955BB004FBE2C /* RatesViewController.swift */; };
 		8CD2A4A325D86E7B001B8AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */; };
-		8CD2A4A525D86E7B001B8AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A425D86E7B001B8AD8 /* SceneDelegate.swift */; };
-		8CD2A4A725D86E7B001B8AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A625D86E7B001B8AD8 /* ViewController.swift */; };
-		8CD2A4AA25D86E7B001B8AD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A825D86E7B001B8AD8 /* Main.storyboard */; };
+		8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */; };
 		8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */; };
 		8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */; };
+		8CD2A4C025D8A606001B8AD8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD2A4BF25D8A606001B8AD8 /* SnapKit */; };
+		8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4C225D8A682001B8AD8 /* RatesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CA8715C25D92D95002DE2DC /* BanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewController.swift; sourceTree = "<group>"; };
+		8CA8715F25D92DC7002DE2DC /* BanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksView.swift; sourceTree = "<group>"; };
+		8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationViewController.swift; sourceTree = "<group>"; };
+		8CA8716525D92FF3002DE2DC /* ConvertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationView.swift; sourceTree = "<group>"; };
+		8CABB12B25D955BB004FBE2C /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
 		8CD2A49F25D86E7B001B8AD8 /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CD2A4A425D86E7B001B8AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CD2A4A625D86E7B001B8AD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8CD2A4A925D86E7B001B8AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CD2A4AE25D86E7B001B8AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CD2A4B025D86E7B001B8AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CD2A4C225D8A682001B8AD8 /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD2A4C025D8A606001B8AD8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,43 @@
 		8CD2A4A125D86E7B001B8AD8 /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
+				8CD2A4BD25D8A542001B8AD8 /* ViewControllers */,
+				8CD2A4BC25D8A53B001B8AD8 /* Views */,
+				8CD2A4BB25D8A52E001B8AD8 /* Extensions */,
 				8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */,
-				8CD2A4A425D86E7B001B8AD8 /* SceneDelegate.swift */,
-				8CD2A4A625D86E7B001B8AD8 /* ViewController.swift */,
-				8CD2A4A825D86E7B001B8AD8 /* Main.storyboard */,
 				8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */,
 				8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */,
 				8CD2A4B025D86E7B001B8AD8 /* Info.plist */,
 			);
 			path = ExchangeRates;
+			sourceTree = "<group>";
+		};
+		8CD2A4BB25D8A52E001B8AD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8CD2A4BC25D8A53B001B8AD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA8715F25D92DC7002DE2DC /* BanksView.swift */,
+				8CA8716525D92FF3002DE2DC /* ConvertationView.swift */,
+				8CD2A4C225D8A682001B8AD8 /* RatesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CD2A4BD25D8A542001B8AD8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */,
+				8CA8715C25D92D95002DE2DC /* BanksViewController.swift */,
+				8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */,
+				8CABB12B25D955BB004FBE2C /* RatesViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,9 @@
 			dependencies = (
 			);
 			name = ExchangeRates;
+			packageProductDependencies = (
+				8CD2A4BF25D8A606001B8AD8 /* SnapKit */,
+			);
 			productName = ExchangeRates;
 			productReference = 8CD2A49F25D86E7B001B8AD8 /* ExchangeRates.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 8CD2A49625D86E7B001B8AD8;
+			packageReferences = (
+				8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8CD2A4A025D86E7B001B8AD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +170,6 @@
 			files = (
 				8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */,
 				8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */,
-				8CD2A4AA25D86E7B001B8AD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +180,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD2A4A725D86E7B001B8AD8 /* ViewController.swift in Sources */,
+				8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */,
+				8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */,
+				8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */,
+				8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */,
+				8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */,
+				8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */,
+				8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */,
 				8CD2A4A325D86E7B001B8AD8 /* AppDelegate.swift in Sources */,
-				8CD2A4A525D86E7B001B8AD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8CD2A4A825D86E7B001B8AD8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CD2A4A925D86E7B001B8AD8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CD2A4BF25D8A606001B8AD8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CD2A49725D86E7B001B8AD8 /* Project object */;
 }
