@@ -25,7 +25,6 @@ class ConvertationView: UIView {
     }
     
     private func initView() {
-        self.backgroundColor = .lightGray
     }
     
     // MARK: - Constraints

@@ -6,16 +6,12 @@
 //
 
 import UIKit
-import SnapKit
 
 class BanksViewController: UIViewController {
-    
+    // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Курсы валют банков РБ"
+        self.navigationItem.title = "Курсы валют банков РБ"
     }
     
 }

@@ -3,29 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C05572525E1CEB0008A47D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C05572425E1CEB0008A47D9 /* SnapKit */; };
+		8C1A2FB425DD62AE000ED384 /* UILabel+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A2FB325DD62AE000ED384 /* UILabel+Ex.swift */; };
 		8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715C25D92D95002DE2DC /* BanksViewController.swift */; };
 		8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715F25D92DC7002DE2DC /* BanksView.swift */; };
 		8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */; };
 		8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716525D92FF3002DE2DC /* ConvertationView.swift */; };
+		8CAAF92325E0671000B75773 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92225E0671000B75773 /* NetworkChecker.swift */; };
+		8CAAF92C25E09E3900B75773 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92B25E09E3900B75773 /* NetworkManager.swift */; };
+		8CAAF92F25E0A2B900B75773 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92E25E0A2B900B75773 /* Rates.swift */; };
 		8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB12B25D955BB004FBE2C /* RatesViewController.swift */; };
+		8CABB13225D960E5004FBE2C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB13125D960E5004FBE2C /* CurrencyModel.swift */; };
+		8CABB13625D96409004FBE2C /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CABB13525D96409004FBE2C /* rates.json */; };
+		8CABB14725DB695C004FBE2C /* UIEdgeInsets+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB14625DB695C004FBE2C /* UIEdgeInsets+Ex.swift */; };
+		8CABB14B25DB699A004FBE2C /* ExchangeRatesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */; };
+		8CB3B50725DED4600006D624 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB3B50625DED4600006D624 /* UIView+Ex.swift */; };
+		8CBB02CD25DBAAA700A260C8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB02CC25DBAAA700A260C8 /* NetworkService.swift */; };
+		8CBB02D125DBCD2400A260C8 /* URLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB02D025DBCD2400A260C8 /* URLPaths.swift */; };
 		8CD2A4A325D86E7B001B8AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */; };
 		8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */; };
 		8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */; };
 		8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */; };
-		8CD2A4C025D8A606001B8AD8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD2A4BF25D8A606001B8AD8 /* SnapKit */; };
 		8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4C225D8A682001B8AD8 /* RatesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1A2FB325DD62AE000ED384 /* UILabel+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ex.swift"; sourceTree = "<group>"; };
 		8CA8715C25D92D95002DE2DC /* BanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewController.swift; sourceTree = "<group>"; };
 		8CA8715F25D92DC7002DE2DC /* BanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksView.swift; sourceTree = "<group>"; };
 		8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationViewController.swift; sourceTree = "<group>"; };
 		8CA8716525D92FF3002DE2DC /* ConvertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationView.swift; sourceTree = "<group>"; };
+		8CAAF92225E0671000B75773 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		8CAAF92B25E09E3900B75773 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8CAAF92E25E0A2B900B75773 /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		8CABB12B25D955BB004FBE2C /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
+		8CABB13125D960E5004FBE2C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		8CABB13525D96409004FBE2C /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
+		8CABB14625DB695C004FBE2C /* UIEdgeInsets+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Ex.swift"; sourceTree = "<group>"; };
+		8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesCell.swift; sourceTree = "<group>"; };
+		8CB3B50625DED4600006D624 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		8CBB02CC25DBAAA700A260C8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8CBB02D025DBCD2400A260C8 /* URLPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPaths.swift; sourceTree = "<group>"; };
 		8CD2A49F25D86E7B001B8AD8 /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -40,13 +62,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD2A4C025D8A606001B8AD8 /* SnapKit in Frameworks */,
+				8C05572525E1CEB0008A47D9 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CABB13025D96098004FBE2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CABB13125D960E5004FBE2C /* CurrencyModel.swift */,
+				8CAAF92E25E0A2B900B75773 /* Rates.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CABB13825D96418004FBE2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CABB13525D96409004FBE2C /* rates.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CABB14025DB33A2004FBE2C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8CAAF92225E0671000B75773 /* NetworkChecker.swift */,
+				8CBB02CC25DBAAA700A260C8 /* NetworkService.swift */,
+				8CAAF92B25E09E3900B75773 /* NetworkManager.swift */,
+				8CBB02D025DBCD2400A260C8 /* URLPaths.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8CABB14925DB697F004FBE2C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		8CD2A49625D86E7B001B8AD8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +124,13 @@
 		8CD2A4A125D86E7B001B8AD8 /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
-				8CD2A4BD25D8A542001B8AD8 /* ViewControllers */,
-				8CD2A4BC25D8A53B001B8AD8 /* Views */,
+				8CABB14925DB697F004FBE2C /* Cells */,
 				8CD2A4BB25D8A52E001B8AD8 /* Extensions */,
+				8CABB13025D96098004FBE2C /* Models */,
+				8CABB14025DB33A2004FBE2C /* Networking */,
+				8CABB13825D96418004FBE2C /* Resources */,
+				8CD2A4BC25D8A53B001B8AD8 /* Views */,
+				8CD2A4BD25D8A542001B8AD8 /* ViewControllers */,
 				8CD2A4A225D86E7B001B8AD8 /* AppDelegate.swift */,
 				8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */,
 				8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */,
@@ -80,6 +142,9 @@
 		8CD2A4BB25D8A52E001B8AD8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8CABB14625DB695C004FBE2C /* UIEdgeInsets+Ex.swift */,
+				8C1A2FB325DD62AE000ED384 /* UILabel+Ex.swift */,
+				8CB3B50625DED4600006D624 /* UIView+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,7 +187,7 @@
 			);
 			name = ExchangeRates;
 			packageProductDependencies = (
-				8CD2A4BF25D8A606001B8AD8 /* SnapKit */,
+				8C05572425E1CEB0008A47D9 /* SnapKit */,
 			);
 			productName = ExchangeRates;
 			productReference = 8CD2A49F25D86E7B001B8AD8 /* ExchangeRates.app */;
@@ -143,7 +208,7 @@
 				};
 			};
 			buildConfigurationList = 8CD2A49A25D86E7B001B8AD8 /* Build configuration list for PBXProject "ExchangeRates" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -152,7 +217,7 @@
 			);
 			mainGroup = 8CD2A49625D86E7B001B8AD8;
 			packageReferences = (
-				8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8C05572325E1CEB0008A47D9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8CD2A4A025D86E7B001B8AD8 /* Products */;
 			projectDirPath = "";
@@ -168,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CABB13625D96409004FBE2C /* rates.json in Resources */,
 				8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */,
 				8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */,
 			);
@@ -180,13 +246,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBB02D125DBCD2400A260C8 /* URLPaths.swift in Sources */,
 				8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */,
 				8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */,
 				8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */,
 				8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */,
+				8C1A2FB425DD62AE000ED384 /* UILabel+Ex.swift in Sources */,
+				8CABB14B25DB699A004FBE2C /* ExchangeRatesCell.swift in Sources */,
+				8CB3B50725DED4600006D624 /* UIView+Ex.swift in Sources */,
 				8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */,
+				8CABB13225D960E5004FBE2C /* CurrencyModel.swift in Sources */,
+				8CAAF92C25E09E3900B75773 /* NetworkManager.swift in Sources */,
+				8CAAF92325E0671000B75773 /* NetworkChecker.swift in Sources */,
 				8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */,
+				8CAAF92F25E0A2B900B75773 /* Rates.swift in Sources */,
 				8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */,
+				8CABB14725DB695C004FBE2C /* UIEdgeInsets+Ex.swift in Sources */,
+				8CBB02CD25DBAAA700A260C8 /* NetworkService.swift in Sources */,
 				8CD2A4A325D86E7B001B8AD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sergei-iotchenko.test.ExchangeRates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,7 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sergei-iotchenko.test.ExchangeRates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -383,9 +459,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		8C05572325E1CEB0008A47D9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			repositoryURL = "git@github.com:SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
@@ -394,9 +470,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8CD2A4BF25D8A606001B8AD8 /* SnapKit */ = {
+		8C05572425E1CEB0008A47D9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8CD2A4BE25D8A606001B8AD8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 8C05572325E1CEB0008A47D9 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

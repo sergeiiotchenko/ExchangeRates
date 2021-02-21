@@ -17,6 +17,7 @@ class BanksView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
         self.initView()
     }
     
@@ -25,7 +26,7 @@ class BanksView: UIView {
     }
     
     private func initView() {
-        self.backgroundColor = .lightGray
+        
     }
     
     // MARK: - Constraints

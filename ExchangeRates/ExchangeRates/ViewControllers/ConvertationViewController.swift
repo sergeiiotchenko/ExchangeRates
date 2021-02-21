@@ -6,16 +6,12 @@
 //
 
 import UIKit
-import SnapKit
 
 class ConvertationViewController: UIViewController {
-    
+    // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Конвертация"
+        self.navigationItem.title = "Конвертация валют"
     }
     
 }

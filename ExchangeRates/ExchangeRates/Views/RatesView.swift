@@ -25,7 +25,7 @@ class RatesView: UIView {
     }
     
     private func initView() {
-        self.backgroundColor = .lightGray
+        
     }
     
     // MARK: - Constraints

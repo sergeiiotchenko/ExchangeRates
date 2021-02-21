@@ -6,9 +6,20 @@
 //
 
 import UIKit
-import SnapKit
 
 class MainTabBarController: UITabBarController {
+    // MARK: - Variables
+    let ratesVC = RatesViewController()
+    let banksVC = BanksViewController()
+    let convertationVC = ConvertationViewController()
+    
+    let ratesNC = UINavigationController(
+        rootViewController: RatesViewController())
+    let banksNC = UINavigationController(
+        rootViewController: BanksViewController())
+    let convertationNC = UINavigationController(
+        rootViewController: ConvertationViewController())
+    
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +29,25 @@ class MainTabBarController: UITabBarController {
     
     // MARK: - Methods
     private func setupTabBarController() {
-        let mainView = UINavigationController(rootViewController: RatesViewController())
-        mainView.title = "Курсы"
-        mainView.tabBarItem.image = UIImage(named: "rates")
+        self.ratesVC.navigationItem.largeTitleDisplayMode = .always
+        self.banksVC.navigationItem.largeTitleDisplayMode = .always
+        self.convertationVC.navigationItem.largeTitleDisplayMode = .always
         
-        let banksView = UINavigationController(rootViewController: BanksViewController())
-        banksView.title = "Банки"
-        banksView.tabBarItem.image = UIImage(named: "banks")
+        self.ratesNC.tabBarItem = UITabBarItem(title: "Курсы",
+                                               image: UIImage(named: "rates"),
+                                               tag: 1)
+        self.banksNC.tabBarItem = UITabBarItem(title: "Банки",
+                                               image: UIImage(named: "banks"),
+                                               tag: 1)
+        self.convertationNC.tabBarItem = UITabBarItem(title: "Конвертация",
+                                                      image: UIImage(named: "convertation"),
+                                                      tag: 1)
         
-        let convertationView = UINavigationController(rootViewController: ConvertationViewController())
-        convertationView.title = "Конвертация"
-        convertationView.tabBarItem.image = UIImage(named: "convertation")
+        self.ratesNC.navigationBar.prefersLargeTitles = true
+        self.banksNC.navigationBar.prefersLargeTitles = true
+        self.convertationNC.navigationBar.prefersLargeTitles = true
         
-        viewControllers = [mainView,banksView,convertationView]
+        setViewControllers([self.ratesNC, self.banksNC, self.convertationNC], animated: false)
     }
 }
 
