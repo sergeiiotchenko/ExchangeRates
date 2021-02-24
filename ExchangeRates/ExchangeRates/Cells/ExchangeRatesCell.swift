@@ -49,6 +49,7 @@ class ExchangeRatesCell: UITableViewCell {
     
     private lazy var flagImageView: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -181,14 +182,14 @@ class ExchangeRatesCell: UITableViewCell {
     }
 
     // MARK: - Setter
-    func set(flag: String?,
+    func set(flag: String,
              scale: String,
              abbreviation: String,
              rate: String,
              name: String,
              quotes: String,
              color: UIColor) {
-        self.flagImageView.image = UIImage(named: flag ?? "BYN")
+        self.flagImageView.image = UIImage(named: flag)
         self.currencyScaleLabel.text = scale
         self.currencyAbbreviationLabel.text = abbreviation
         self.currencyOfficialRateLabel.text = rate

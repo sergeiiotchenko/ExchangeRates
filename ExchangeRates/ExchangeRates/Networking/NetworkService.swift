@@ -8,6 +8,12 @@
 import Foundation
 
 class NetworkService {
+    // MARK: - Variables
+    static let shared = NetworkService()
+    
+    // MARK: - Initialization
+    private init() { }
+    
     // MARK: - Methods
     func loadAndParseJSON(urlPath: String, completionHandler: @escaping (Result<[CurrencyModel], Error>) -> Void) {
         guard let url = URL(string: urlPath) else { return }

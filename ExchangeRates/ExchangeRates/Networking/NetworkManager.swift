@@ -9,7 +9,7 @@ import UIKit
 
 class NetworkManager {
     // MARK: - Variables
-    private let networkService = NetworkService()
+//    private let networkService = NetworkService()
     
     // MARK: - Functions
     func getTodayRates(_ compitionHandler: @escaping ([Rates]) -> Void) {
@@ -27,7 +27,7 @@ class NetworkManager {
             pathForYestardayRates = "https://www.nbrb.by/api/exrates/rates?ondate=\(dateFormatter.string(from: yesterday))&periodicity=0"
         }
         
-        networkService.loadAndParseJSON(urlPath: pathForYestardayRates) { (result) in
+        NetworkService.shared.loadAndParseJSON(urlPath: pathForYestardayRates) { (result) in
             switch result {
             case .success(let rates):
                 rates.forEach {
@@ -38,9 +38,7 @@ class NetworkManager {
             }
         }
         
-        networkService.loadAndParseJSON(urlPath: URLPaths.allRatesURLPath.rawValue) { [weak self] (result) in
-            guard self != nil else { return }
-            
+        NetworkService.shared.loadAndParseJSON(urlPath: URLPaths.allRatesURLPath.rawValue) { (result) in
             switch result {
             case .success(let rates):
                 rates.forEach {
