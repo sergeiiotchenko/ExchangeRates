@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Rates {
+class NBRBRates {
     // MARK: - Variables
     var abbreviation: String
     var id: String

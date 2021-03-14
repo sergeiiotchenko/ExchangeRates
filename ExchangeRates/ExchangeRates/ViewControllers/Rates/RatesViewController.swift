@@ -10,9 +10,19 @@ import Network
 
 class RatesViewController: UIViewController {
     // MARK: - Variables
-    let networkManager = NetworkManager()
+    private var actualyRates: [NBRBRates] = []
+    private var actualyRatesFiltered: [NBRBRates] = []
     
-    var actualyRates: [Rates] = []
+    private let refreshControl = UIRefreshControl()
+    private let search = UISearchController(searchResultsController: nil)
+    
+    private var searchBarIsEmpty: Bool {
+        guard let text = search.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return self.search.isActive && !self.searchBarIsEmpty
+    }
     
     // MARK: - GUI Variables
     private lazy var tableView: UITableView = {
@@ -23,6 +33,8 @@ class RatesViewController: UIViewController {
                            forCellReuseIdentifier: ExchangeRatesCell.reuseIdentifier)
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(self.updateTable), for: .valueChanged)
         
         return tableView
     }()
@@ -36,22 +48,19 @@ class RatesViewController: UIViewController {
         return activityView
     }()
     
+    
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Курсы НБРБ"
         
         self.view.addSubview(self.tableView)
-        setupTableViewConstraints()
         
-        networkManager.getTodayRates { (rates) in
-            self.actualyRates = rates
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.activityView.stopAnimating()
-            }
-        }
+        self.setupTableViewConstraints()
+        self.setRates()
+        self.setupSearchBar()
     }
+    
     
     // MARK: - Constraints
     func setupTableViewConstraints() {
@@ -61,35 +70,91 @@ class RatesViewController: UIViewController {
             self.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
-        
-        self.activityView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             self.activityView.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor),
             self.activityView.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor)
         ])
+        
+        self.activityView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    // MARK: - Methods
     
+    // MARK: - Functions
+    func setupSearchBar() {
+        self.navigationItem.searchController = search
+        search.searchResultsUpdater = self
+        self.search.obscuresBackgroundDuringPresentation = false
+        self.search.searchBar.placeholder = "Валюта"
+        self.definesPresentationContext = true
+    }
+    
+    private func setRates() {
+        if NetworkChecker.isConnectedToNetwork() {
+            NetworkManager.shared.getTodayRates { [weak self] (rates) in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.actualyRates = rates
+                    self.activityView.stopAnimating()
+                    self.tableView.reloadData()
+                }
+            }
+        } else {
+            self.activityView.stopAnimating()
+            
+            let title: String = "Ошибка!"
+            let message: String = "Отсутствует подключение к интернету."
+            
+            let alert = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Обновить", style: .default, handler: { _ in
+                self.setRates()
+            }))
+            
+            self.present(alert, animated: true)
+        }
+    }
+    
+    @objc func updateTable() {
+        self.setRates()
+        self.refreshControl.endRefreshing()
+    }
 }
 
-extension RatesViewController: UITableViewDelegate, UITableViewDataSource {
+//MARK: - Extensions
+extension RatesViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(self.search.searchBar.text ?? "")
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        self.actualyRatesFiltered = actualyRates.filter({ (rates: NBRBRates) -> Bool in
+            return rates.abbreviation.lowercased().contains(searchText.lowercased()) || rates.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        self.tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.actualyRates.count
+        self.isFiltering ? self.actualyRatesFiltered.count : self.actualyRates.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: ExchangeRatesCell.reuseIdentifier,
-                                                      for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: ExchangeRatesCell.reuseIdentifier, for: indexPath)
+        var rates: NBRBRates
+        
+        self.isFiltering ? (rates = self.actualyRatesFiltered[indexPath.row]) : (rates = self.actualyRates[indexPath.row])
+        
         if let cell = cell as? ExchangeRatesCell {
-            cell.set(flag: actualyRates[indexPath.row].abbreviation,
-                     scale: actualyRates[indexPath.row].scale,
-                     abbreviation: actualyRates[indexPath.row].abbreviation,
-                     rate: actualyRates[indexPath.row].rate,
-                     name: actualyRates[indexPath.row].name,
-                     quotes: actualyRates[indexPath.row].quote,
-                     color: actualyRates[indexPath.row].color)
+            cell.set(flag: rates.abbreviation,
+                     scale: rates.scale,
+                     abbreviation: rates.abbreviation,
+                     rate: rates.rate,
+                     name: rates.name,
+                     quotes: rates.quote,
+                     color: rates.color)
         }
         
         return cell
@@ -97,8 +162,25 @@ extension RatesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CurrencyInformationViewController()
+        var rates: NBRBRates
+        
+        self.isFiltering ? (rates = self.actualyRatesFiltered[indexPath.row]) : (rates = self.actualyRates[indexPath.row])
+        
+        vc.set(abbreviation: rates.abbreviation,
+               id: rates.id,
+               date: rates.date,
+               name: rates.name,
+               scale: rates.scale,
+               rate: rates.rate,
+               quote: rates.quote,
+               color: rates.color)
+        
+        vc.id = self.actualyRates[indexPath.row].id
+        vc.abbreviation = self.actualyRates[indexPath.row].abbreviation
+        
         DispatchQueue.main.async {
-            self.present(vc, animated: true)
+            //self.present(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

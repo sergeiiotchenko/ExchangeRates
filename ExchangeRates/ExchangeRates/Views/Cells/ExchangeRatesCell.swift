@@ -27,6 +27,7 @@ class ExchangeRatesCell: UITableViewCell {
     }
     
     private var flagSize = CGSize(width: 50, height: 50)
+    private var rateSize = CGSize(width: 200, height: 50)
     
     // MARK: - GUI Variables
     private lazy var mainView = UIView()
@@ -37,21 +38,13 @@ class ExchangeRatesCell: UITableViewCell {
         return view
     }()
     
-    private lazy var descriptionContainerView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
-    private lazy var valueContainerView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
     private lazy var flagImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         return image
     }()
+    
+    private lazy var descriptionContainerView = UIView()
     
     private lazy var currencyScaleLabel: UILabel = {
         let label = UILabel()
@@ -65,17 +58,19 @@ class ExchangeRatesCell: UITableViewCell {
         return label
     }()
     
-    private lazy var currencyOfficialRateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        return label
-    }()
-    
     private lazy var currencyNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .gray
+        return label
+    }()
+    
+    private lazy var valueContainerView = UIView()
+    
+    private lazy var currencyOfficialRateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
     
@@ -119,6 +114,8 @@ class ExchangeRatesCell: UITableViewCell {
                                              self.quotesView])
         
         self.quotesView.addSubview(self.currencyQuotesLabel)
+        
+        self.updateConstraints()
     }
     
     // MARK: - Constraints
@@ -138,14 +135,9 @@ class ExchangeRatesCell: UITableViewCell {
         }
         
         self.descriptionContainerView.snp.updateConstraints { (make) in
-            make.top.bottom.equalToSuperview().inset(2)
-            make.right.equalTo(self.valueContainerView.snp.left)
             make.left.equalTo(self.flagContainerView.snp.right)
-        }
-        
-        self.valueContainerView.snp.updateConstraints { (make) in
-            make.top.bottom.equalToSuperview().inset(2)
-            make.right.equalToSuperview().inset(self.edgeInsets)
+            make.height.equalTo(self.flagContainerView.snp.height)
+            make.centerY.equalTo(self.flagContainerView.snp.centerY)
         }
         
         self.currencyScaleLabel.snp.updateConstraints { (make) in
@@ -155,22 +147,33 @@ class ExchangeRatesCell: UITableViewCell {
         self.currencyAbbreviationLabel.snp.updateConstraints { (make) in
             make.centerY.equalTo(self.currencyScaleLabel.snp.centerY)
             make.left.equalTo(self.currencyScaleLabel.snp.right).offset(4)
-        }
-        
-        self.currencyOfficialRateLabel.snp.updateConstraints { (make) in
-            make.centerY.equalTo(self.currencyScaleLabel.snp.centerY)
-            make.right.equalToSuperview().inset(self.edgeInsets)
+            make.right.lessThanOrEqualToSuperview().inset(self.edgeInsets)
+            make.height.equalTo(self.currencyScaleLabel.snp.height)
         }
         
         self.currencyNameLabel.snp.updateConstraints { (make) in
             make.left.bottom.equalToSuperview().inset(self.edgeInsets)
-            make.right.equalToSuperview().inset(self.edgeInsets)
+            make.right.lessThanOrEqualToSuperview().inset(self.edgeInsets)
             make.top.equalTo(self.currencyScaleLabel.snp.bottom).offset(4)
+            make.bottom.equalToSuperview().inset(self.edgeInsets)
+        }
+        
+        self.valueContainerView.snp.updateConstraints { (make) in
+            make.right.equalToSuperview().inset(self.edgeInsets)
+            make.left.equalTo(self.descriptionContainerView.snp.right)
+            make.height.equalTo(self.flagContainerView.snp.height)
+            make.centerY.equalTo(self.flagContainerView.snp.centerY)
+        }
+        
+        self.currencyOfficialRateLabel.snp.updateConstraints { (make) in
+            make.centerY.equalTo(self.currencyScaleLabel.snp.centerY)
+            make.right.left.equalToSuperview().inset(self.edgeInsets)
         }
         
         self.quotesView.snp.updateConstraints { (make) in
             make.centerY.equalTo(self.currencyNameLabel.snp.centerY)
             make.right.equalToSuperview().inset(self.edgeInsets)
+            make.left.greaterThanOrEqualToSuperview()
         }
         
         self.currencyQuotesLabel.snp.updateConstraints { (make) in

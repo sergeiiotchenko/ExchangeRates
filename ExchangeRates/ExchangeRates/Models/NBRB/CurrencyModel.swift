@@ -24,17 +24,17 @@ class CurrencyModel: Decodable {
     var curAbbreviation: String
     var curScale: Int
     var curName: String
-    var curOfficialRate: Double
+    var curOfficialRate: Double?
     
     // MARK: - Initialization
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.curID = try! container.decode(Int.self, forKey: .curID)
-        self.date = try! container.decode(String.self, forKey: .date)
-        self.curAbbreviation = try! container.decode(String.self, forKey: .curAbbreviation)
-        self.curScale = try! container.decode(Int.self, forKey: .curScale)
-        self.curName = try! container.decode(String.self, forKey: .curName)
-        self.curOfficialRate = try! container.decode(Double.self, forKey: .curOfficialRate)
+        self.curID = try container.decode(Int.self, forKey: .curID)
+        self.date = try container.decode(String.self, forKey: .date)
+        self.curAbbreviation = try container.decode(String.self, forKey: .curAbbreviation)
+        self.curScale = try container.decode(Int.self, forKey: .curScale)
+        self.curName = try container.decode(String.self, forKey: .curName)
+        self.curOfficialRate = try container.decodeIfPresent(Double.self, forKey: .curOfficialRate)
     }
 }
