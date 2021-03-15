@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class ExchangeRatesCell: UITableViewCell {
-    // MARK: - Idetifier
+    
     static let reuseIdentifier = "ExchangeRatesCellIdentifier"
     
 

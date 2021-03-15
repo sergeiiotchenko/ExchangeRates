@@ -58,8 +58,8 @@ class NetworkManager {
                                                                    id: String(todayRates[index].id),
                                                                    date: todayRates[index].date,
                                                                    name: todayRates[index].name,
-                                                                   scale: String(todayRates[index].scale),
-                                                                   rate: "\(todayRate) BYN",
+                                                                   scale: todayRates[index].scale,
+                                                                   rate: todayRate,
                                                                    quote: "+\(String(format: "%.4f", todayRate - previousRate))",
                                                                    color: UIColor.systemRed))
                             case ...0:
@@ -67,8 +67,8 @@ class NetworkManager {
                                                                    id: String(todayRates[index].id),
                                                                    date: todayRates[index].date,
                                                                    name: todayRates[index].name,
-                                                                   scale: String(todayRates[index].scale),
-                                                                   rate: "\(todayRate) BYN",
+                                                                   scale: todayRates[index].scale,
+                                                                   rate: todayRate,
                                                                    quote: "\(String(format: "%.4f", todayRate - previousRate))",
                                                                    color: UIColor.systemGreen))
                             default: break

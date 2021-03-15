@@ -13,13 +13,13 @@ class NBRBRates {
     var id: String
     var date: String
     var name: String
-    var scale: String
-    var rate: String
+    var scale: Int
+    var rate: Double
     var quote: String
     var color: UIColor
     
     // MARK: - Initializators
-    init(abbreviation: String, id: String, date: String, name: String, scale: String, rate: String, quote: String, color: UIColor) {
+    init(abbreviation: String, id: String, date: String, name: String, scale: Int, rate: Double, quote: String, color: UIColor) {
         self.abbreviation = abbreviation
         self.id = id
         self.date = date

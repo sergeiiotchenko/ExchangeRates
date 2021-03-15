@@ -39,7 +39,7 @@ class RatesViewController: UIViewController {
         return tableView
     }()
     
-    lazy var activityView: UIActivityIndicatorView = {
+    private lazy var activityView: UIActivityIndicatorView = {
         let activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityView.hidesWhenStopped = true
         activityView.startAnimating()
@@ -63,7 +63,7 @@ class RatesViewController: UIViewController {
     
     
     // MARK: - Constraints
-    func setupTableViewConstraints() {
+    private func setupTableViewConstraints() {
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
@@ -80,7 +80,7 @@ class RatesViewController: UIViewController {
     
     
     // MARK: - Functions
-    func setupSearchBar() {
+    private func setupSearchBar() {
         self.navigationItem.searchController = search
         search.searchResultsUpdater = self
         self.search.obscuresBackgroundDuringPresentation = false
@@ -149,9 +149,9 @@ extension RatesViewController: UITableViewDelegate, UITableViewDataSource, UISea
         
         if let cell = cell as? ExchangeRatesCell {
             cell.set(flag: rates.abbreviation,
-                     scale: rates.scale,
+                     scale: String(rates.scale),
                      abbreviation: rates.abbreviation,
-                     rate: rates.rate,
+                     rate: "\(rates.rate) BYN",
                      name: rates.name,
                      quotes: rates.quote,
                      color: rates.color)
@@ -170,8 +170,8 @@ extension RatesViewController: UITableViewDelegate, UITableViewDataSource, UISea
                id: rates.id,
                date: rates.date,
                name: rates.name,
-               scale: rates.scale,
-               rate: rates.rate,
+               scale: String(rates.scale),
+               rate: "\(rates.rate) BYN",
                quote: rates.quote,
                color: rates.color)
         
@@ -179,7 +179,6 @@ extension RatesViewController: UITableViewDelegate, UITableViewDataSource, UISea
         vc.abbreviation = self.actualyRates[indexPath.row].abbreviation
         
         DispatchQueue.main.async {
-            //self.present(vc, animated: true)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

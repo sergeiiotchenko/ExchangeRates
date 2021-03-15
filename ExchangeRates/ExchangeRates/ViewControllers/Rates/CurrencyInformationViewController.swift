@@ -9,14 +9,14 @@ import UIKit
 import SnapKit
 import Charts
 
-class CurrencyInformationViewController: UIViewController {
+class CurrencyInformationViewController: UIViewController, UIPickerViewDelegate {
     // MARK: - Variables
     var id: String = ""
     var abbreviation = ""
     
-    let network = NetworkManager.shared
+    private let network = NetworkManager.shared
     
-    var todaysExchangeRates: [(flag: String,
+    private var todaysExchangeRates: [(flag: String,
                                abbreviation: String,
                                id: String,
                                date: String,
@@ -25,15 +25,9 @@ class CurrencyInformationViewController: UIViewController {
                                rate: String,
                                quote: String,
                                color: UIColor)] = []
-    var dateForChartView: [String] = []
+    private var dateForChartView: [String] = []
     
     // MARK: - GUI Variables
-    private lazy var mainView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
-    
     private lazy var currencyInformationView: CurrencyInformationView = {
         let view = CurrencyInformationView()
         view.requestAction = { [weak self] index in
@@ -53,11 +47,9 @@ class CurrencyInformationViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.addSubview(self.currencyInformationView)
-        
-        self.setupConstraints()
-        
         self.navigationItem.title = self.abbreviation
         
+        self.setupConstraints()
         self.currencyInformationView.set(scale: self.todaysExchangeRates[0].scale,
                                          abbreviation: self.todaysExchangeRates[0].abbreviation,
                                          rate: self.todaysExchangeRates[0].rate,
@@ -69,8 +61,7 @@ class CurrencyInformationViewController: UIViewController {
     }
     
     // MARK: - Constraints
-    func setupConstraints() {
-        
+    private func setupConstraints() {
         self.currencyInformationView.snp.updateConstraints { (make) in
             make.edges.equalToSuperview()
         }
@@ -129,7 +120,7 @@ class CurrencyInformationViewController: UIViewController {
         }
     }
     
-    func setupLineChartViewPropertiesAndData(_ entries: [ChartDataEntry],
+    private func setupLineChartViewPropertiesAndData(_ entries: [ChartDataEntry],
                                              description label: String,
                                              _ array: [ShortRates]) -> LineChartData {
         let set = LineChartDataSet(entries: entries,

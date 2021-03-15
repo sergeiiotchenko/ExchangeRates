@@ -13,16 +13,13 @@
 		8C29B3D325F829170069CCA1 /* ERNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29B3D225F829170069CCA1 /* ERNetworkErrors.swift */; };
 		8C48479B25E8A9DC003EC0B2 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C48479A25E8A9DC003EC0B2 /* Date+Ex.swift */; };
 		8C88A66825E4921E00FD49D0 /* CurrencyInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88A66725E4921E00FD49D0 /* CurrencyInformationView.swift */; };
-		8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715C25D92D95002DE2DC /* BanksViewController.swift */; };
-		8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8715F25D92DC7002DE2DC /* BanksView.swift */; };
-		8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */; };
-		8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8716525D92FF3002DE2DC /* ConvertationView.swift */; };
+		8CA4760325FEB50700AFFC10 /* ERCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4760225FEB50700AFFC10 /* ERCollectionViewCell.swift */; };
+		8CA4760525FED4E500AFFC10 /* RatesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4760425FED4E500AFFC10 /* RatesCollectionView.swift */; };
 		8CAAF92325E0671000B75773 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92225E0671000B75773 /* NetworkChecker.swift */; };
 		8CAAF92C25E09E3900B75773 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92B25E09E3900B75773 /* NetworkManager.swift */; };
 		8CAAF92F25E0A2B900B75773 /* NBRBRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAAF92E25E0A2B900B75773 /* NBRBRates.swift */; };
 		8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB12B25D955BB004FBE2C /* RatesViewController.swift */; };
 		8CABB13225D960E5004FBE2C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB13125D960E5004FBE2C /* CurrencyModel.swift */; };
-		8CABB13625D96409004FBE2C /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CABB13525D96409004FBE2C /* rates.json */; };
 		8CABB14725DB695C004FBE2C /* UIEdgeInsets+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB14625DB695C004FBE2C /* UIEdgeInsets+Ex.swift */; };
 		8CABB14B25DB699A004FBE2C /* ExchangeRatesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */; };
 		8CAC2F5B25F98F0900321E34 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8CAC2F5A25F98F0900321E34 /* Charts */; };
@@ -34,9 +31,10 @@
 		8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */; };
 		8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */; };
 		8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */; };
-		8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2A4C225D8A682001B8AD8 /* RatesView.swift */; };
 		8CD4D26225F6765D00A10A9D /* ERURLCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4D26125F6765D00A10A9D /* ERURLCreator.swift */; };
 		8CD4D26525F818A400A10A9D /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4D26425F818A400A10A9D /* Period.swift */; };
+		8CE9849A25FF0CEC00865F6E /* RatesPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9849925FF0CEC00865F6E /* RatesPickerView.swift */; };
+		8CE984A225FF674600865F6E /* ERConvertationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE984A125FF674600865F6E /* ERConvertationViewController.swift */; };
 		8CF66E3225F10D7D00D8BA20 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF66E3125F10D7D00D8BA20 /* String+Ex.swift */; };
 		8CF9960225E88D93003012D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CF9960125E88D93003012D9 /* SnapKit */; };
 /* End PBXBuildFile section */
@@ -62,16 +60,13 @@
 		8C29B3D225F829170069CCA1 /* ERNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERNetworkErrors.swift; sourceTree = "<group>"; };
 		8C48479A25E8A9DC003EC0B2 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		8C88A66725E4921E00FD49D0 /* CurrencyInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInformationView.swift; sourceTree = "<group>"; };
-		8CA8715C25D92D95002DE2DC /* BanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewController.swift; sourceTree = "<group>"; };
-		8CA8715F25D92DC7002DE2DC /* BanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksView.swift; sourceTree = "<group>"; };
-		8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationViewController.swift; sourceTree = "<group>"; };
-		8CA8716525D92FF3002DE2DC /* ConvertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertationView.swift; sourceTree = "<group>"; };
+		8CA4760225FEB50700AFFC10 /* ERCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CA4760425FED4E500AFFC10 /* RatesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesCollectionView.swift; sourceTree = "<group>"; };
 		8CAAF92225E0671000B75773 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		8CAAF92B25E09E3900B75773 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8CAAF92E25E0A2B900B75773 /* NBRBRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBRBRates.swift; sourceTree = "<group>"; };
 		8CABB12B25D955BB004FBE2C /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
 		8CABB13125D960E5004FBE2C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
-		8CABB13525D96409004FBE2C /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
 		8CABB14625DB695C004FBE2C /* UIEdgeInsets+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Ex.swift"; sourceTree = "<group>"; };
 		8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesCell.swift; sourceTree = "<group>"; };
 		8CB3B50625DED4600006D624 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
@@ -83,9 +78,10 @@
 		8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CD2A4AE25D86E7B001B8AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CD2A4B025D86E7B001B8AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CD2A4C225D8A682001B8AD8 /* RatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesView.swift; sourceTree = "<group>"; };
 		8CD4D26125F6765D00A10A9D /* ERURLCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERURLCreator.swift; sourceTree = "<group>"; };
 		8CD4D26425F818A400A10A9D /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		8CE9849925FF0CEC00865F6E /* RatesPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesPickerView.swift; sourceTree = "<group>"; };
+		8CE984A125FF674600865F6E /* ERConvertationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERConvertationViewController.swift; sourceTree = "<group>"; };
 		8CF66E3125F10D7D00D8BA20 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,18 +107,12 @@
 			path = Rates;
 			sourceTree = "<group>";
 		};
-		8C05573725E3D53B008A47D9 /* Banks */ = {
-			isa = PBXGroup;
-			children = (
-				8CA8715C25D92D95002DE2DC /* BanksViewController.swift */,
-			);
-			path = Banks;
-			sourceTree = "<group>";
-		};
 		8C05573825E3D553008A47D9 /* Convertation */ = {
 			isa = PBXGroup;
 			children = (
-				8CA8716225D92FC0002DE2DC /* ConvertationViewController.swift */,
+				8CA4760425FED4E500AFFC10 /* RatesCollectionView.swift */,
+				8CE984A125FF674600865F6E /* ERConvertationViewController.swift */,
+				8CE9849925FF0CEC00865F6E /* RatesPickerView.swift */,
 			);
 			path = Convertation;
 			sourceTree = "<group>";
@@ -130,26 +120,9 @@
 		8C88A66625E491A900FD49D0 /* Rates */ = {
 			isa = PBXGroup;
 			children = (
-				8CD2A4C225D8A682001B8AD8 /* RatesView.swift */,
 				8C88A66725E4921E00FD49D0 /* CurrencyInformationView.swift */,
 			);
 			path = Rates;
-			sourceTree = "<group>";
-		};
-		8C88A66C25E4926700FD49D0 /* Banks */ = {
-			isa = PBXGroup;
-			children = (
-				8CA8715F25D92DC7002DE2DC /* BanksView.swift */,
-			);
-			path = Banks;
-			sourceTree = "<group>";
-		};
-		8C88A66D25E4926E00FD49D0 /* Convertation */ = {
-			isa = PBXGroup;
-			children = (
-				8CA8716525D92FF3002DE2DC /* ConvertationView.swift */,
-			);
-			path = Convertation;
 			sourceTree = "<group>";
 		};
 		8CA475DD25FC04EE00AFFC10 /* NBRB */ = {
@@ -177,7 +150,6 @@
 			children = (
 				8CD2A4AD25D86E7B001B8AD8 /* LaunchScreen.storyboard */,
 				8CD2A4AB25D86E7B001B8AD8 /* Assets.xcassets */,
-				8CABB13525D96409004FBE2C /* rates.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -200,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8CABB14A25DB699A004FBE2C /* ExchangeRatesCell.swift */,
+				8CA4760225FEB50700AFFC10 /* ERCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -250,8 +223,6 @@
 			children = (
 				8CABB14925DB697F004FBE2C /* Cells */,
 				8C88A66625E491A900FD49D0 /* Rates */,
-				8C88A66C25E4926700FD49D0 /* Banks */,
-				8C88A66D25E4926E00FD49D0 /* Convertation */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,7 +232,6 @@
 			children = (
 				8CD2A4A625D86E7B001B8AD8 /* MainTabBarController.swift */,
 				8C05573625E3D529008A47D9 /* Rates */,
-				8C05573725E3D53B008A47D9 /* Banks */,
 				8C05573825E3D553008A47D9 /* Convertation */,
 			);
 			path = ViewControllers;
@@ -333,7 +303,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CABB13625D96409004FBE2C /* rates.json in Resources */,
 				8CD2A4AF25D86E7B001B8AD8 /* LaunchScreen.storyboard in Resources */,
 				8CD2A4AC25D86E7B001B8AD8 /* Assets.xcassets in Resources */,
 			);
@@ -347,29 +316,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBB02D125DBCD2400A260C8 /* URLPaths.swift in Sources */,
-				8CA8716625D92FF3002DE2DC /* ConvertationView.swift in Sources */,
 				8C08347625E9A49500C391D8 /* ShortRates.swift in Sources */,
-				8CA8715D25D92D95002DE2DC /* BanksViewController.swift in Sources */,
 				8CABB12C25D955BB004FBE2C /* RatesViewController.swift in Sources */,
 				8CD2A4A725D86E7B001B8AD8 /* MainTabBarController.swift in Sources */,
 				8CABB14B25DB699A004FBE2C /* ExchangeRatesCell.swift in Sources */,
 				8CB3B50725DED4600006D624 /* UIView+Ex.swift in Sources */,
 				8CF66E3225F10D7D00D8BA20 /* String+Ex.swift in Sources */,
+				8CE9849A25FF0CEC00865F6E /* RatesPickerView.swift in Sources */,
 				8C29B3D325F829170069CCA1 /* ERNetworkErrors.swift in Sources */,
-				8CA8716325D92FC0002DE2DC /* ConvertationViewController.swift in Sources */,
+				8CE984A225FF674600865F6E /* ERConvertationViewController.swift in Sources */,
 				8CABB13225D960E5004FBE2C /* CurrencyModel.swift in Sources */,
 				8CAAF92C25E09E3900B75773 /* NetworkManager.swift in Sources */,
 				8CAAF92325E0671000B75773 /* NetworkChecker.swift in Sources */,
 				8CD4D26225F6765D00A10A9D /* ERURLCreator.swift in Sources */,
-				8CA8716025D92DC7002DE2DC /* BanksView.swift in Sources */,
 				8CAAF92F25E0A2B900B75773 /* NBRBRates.swift in Sources */,
-				8CD2A4C325D8A682001B8AD8 /* RatesView.swift in Sources */,
 				8C05573425E3D4F5008A47D9 /* CurrencyInformationViewController.swift in Sources */,
 				8C08347825E9A4EA00C391D8 /* ShortCurrencyModel.swift in Sources */,
 				8CABB14725DB695C004FBE2C /* UIEdgeInsets+Ex.swift in Sources */,
 				8C88A66825E4921E00FD49D0 /* CurrencyInformationView.swift in Sources */,
 				8C48479B25E8A9DC003EC0B2 /* Date+Ex.swift in Sources */,
 				8CBB02CD25DBAAA700A260C8 /* NetworkService.swift in Sources */,
+				8CA4760525FED4E500AFFC10 /* RatesCollectionView.swift in Sources */,
+				8CA4760325FEB50700AFFC10 /* ERCollectionViewCell.swift in Sources */,
 				8CD2A4A325D86E7B001B8AD8 /* AppDelegate.swift in Sources */,
 				8CD4D26525F818A400A10A9D /* Period.swift in Sources */,
 			);
