@@ -10,15 +10,12 @@ import UIKit
 class MainTabBarController: UITabBarController {
     // MARK: - Variables
     let ratesVC = RatesViewController()
-    let convertationVC = ConvertationViewController()
-    let banksVC = BanksViewController()
+    let convertationVC = ERConvertationViewController()
     
     let ratesNC = UINavigationController(
         rootViewController: RatesViewController())
     let convertationNC = UINavigationController(
-        rootViewController: ConvertationViewController())
-    let banksNC = UINavigationController(
-        rootViewController: BanksViewController())
+        rootViewController: ERConvertationViewController())
     
     // MARK: - Life cicle
     override func viewDidLoad() {
@@ -31,11 +28,9 @@ class MainTabBarController: UITabBarController {
     private func setupTabBarController() {
         self.ratesNC.navigationBar.prefersLargeTitles = true
         self.convertationNC.navigationBar.prefersLargeTitles = true
-        self.banksNC.navigationBar.prefersLargeTitles = true
         
         self.ratesVC.navigationItem.largeTitleDisplayMode = .always
         self.convertationVC.navigationItem.largeTitleDisplayMode = .always
-        self.banksVC.navigationItem.largeTitleDisplayMode = .always
         
         self.ratesNC.tabBarItem = UITabBarItem(title: "Курсы",
                                                image: UIImage(named: "rates"),
@@ -43,12 +38,8 @@ class MainTabBarController: UITabBarController {
         self.convertationNC.tabBarItem = UITabBarItem(title: "Конвертация",
                                                       image: UIImage(named: "convertation"),
                                                       tag: 1)
-        self.banksNC.tabBarItem = UITabBarItem(title: "Банки",
-                                               image: UIImage(named: "banks"),
-                                               tag: 1)
         
-        
-        setViewControllers([self.ratesNC, self.convertationNC, self.banksNC], animated: false)
+        setViewControllers([self.ratesNC, self.convertationNC], animated: false)
     }
 }
 

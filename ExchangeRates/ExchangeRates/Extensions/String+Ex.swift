@@ -17,3 +17,9 @@ func convertDateFormat(inputDate: String) -> String {
     convertDateFormatter.dateFormat = "dd.MM.yyyy"
     return convertDateFormatter.string(from: oldDate)
 }
+
+extension String {
+    var toDouble: Double {
+        return Double(self) ?? 0.0
+    }
+}

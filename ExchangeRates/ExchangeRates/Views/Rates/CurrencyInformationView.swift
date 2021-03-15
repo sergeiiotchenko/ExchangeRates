@@ -27,11 +27,7 @@ class CurrencyInformationView: UIView, ChartViewDelegate {
     // MARK: - GUI Variables
     private lazy var mainView = UIView()
     
-    private lazy var descriptionView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private lazy var descriptionView = UIView()
     
     private lazy var currencyScaleLabel: UILabel = {
         let label = UILabel()
@@ -75,11 +71,7 @@ class CurrencyInformationView: UIView, ChartViewDelegate {
         return view
     }()
     
-    private lazy var chartsView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private lazy var chartsView = UIView()
     
     private lazy var segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: ["1Н", "1М", "3М", "6М", "1Г"])
