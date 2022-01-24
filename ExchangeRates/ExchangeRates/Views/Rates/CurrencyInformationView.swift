@@ -20,6 +20,7 @@ class CurrencyInformationView: UIView, ChartViewDelegate {
     private let lineHeight: CGFloat = 1
     private let heightSegmentedControl = 30
     private let heightLineChartView = 200
+    private var chartsViewSize = CGSize(width: 300, height: 235)
     
     var requestAction: ((Int) -> Void)?
     var setupCource: ((Double, Double) -> Void)?
@@ -204,14 +205,14 @@ class CurrencyInformationView: UIView, ChartViewDelegate {
             make.top.equalTo(self.courceForTheSelectedDayLabel.snp.bottom)
             make.left.equalToSuperview()
             make.right.equalToSuperview().offset(-4)
-            make.height.greaterThanOrEqualTo(self.heightLineChartView)
+            make.height.equalTo(self.chartsViewSize)
         }
         
         self.segmentedControl.snp.updateConstraints { (make) in
             make.top.equalTo(self.lineChartView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
-            make.bottom.equalToSuperview().offset(-10)
+            //make.bottom.equalToSuperview().offset(-10)
             make.height.equalTo(self.heightSegmentedControl)
         }
         
